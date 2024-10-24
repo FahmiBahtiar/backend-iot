@@ -1,0 +1,20 @@
+{
+  "name": "backend-iot",
+  "version": "1.0.0",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@elysiajs/cors": "^0.8.0",
+    "@elysiajs/swagger": "^0.8.0",
+    "@elysiajs/websocket": "^0.2.8",
+    "elysia": "^0.8.17",
+    "mongoose": "^8.1.1"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@types/mongoose": "^5.11.97"
+  }
+}
