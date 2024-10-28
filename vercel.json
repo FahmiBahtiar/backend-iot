@@ -1,9 +1,12 @@
 {
     "version": 2,
+    "buildCommand": "bun run build",
+    "installCommand": "bun install",
+    "framework": null,
     "builds": [
       {
-        "src": "src/index.ts",
-        "use": "@now/node"
+        "src": "src/**/*.ts",
+        "use": "@vercel/node"
       }
     ],
     "routes": [
@@ -11,5 +14,8 @@
         "src": "/(.*)",
         "dest": "src/index.ts"
       }
-    ]
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
   }

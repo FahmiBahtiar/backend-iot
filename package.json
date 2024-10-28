@@ -4,7 +4,9 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun build ./src/index.ts --target bun --outfile dist/index.js",
+    "start": "NODE_ENV=production bun run src/index.ts"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.8.0",
@@ -16,5 +18,8 @@
   "devDependencies": {
     "bun-types": "latest",
     "@types/mongoose": "^5.11.97"
+  },
+  "engines": {
+    "bun": "latest"
   }
 }
