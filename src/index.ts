@@ -1,7 +1,6 @@
 import { Elysia } from "elysia";
 import { swagger } from "@elysiajs/swagger";
 import { connectDB } from "./config/database.config";
-import { userRoutes } from "./routes/product.route";
 import { errorHandler } from "./middlewares/error.middleware";
 import { requestLogger } from "./middlewares/logger.middleware";
 import { DiscordLogger } from "./middlewares/discord.middleware";
@@ -35,7 +34,6 @@ const app = new Elysia()
   .use(requestLogger)
   .use(errorHandler)
   .use(loggerRoutes)
-  .use(userRoutes)
   .use(informationRoutes)
   .use(
     new Elysia({ prefix: "/api" }).get("/", async () => {

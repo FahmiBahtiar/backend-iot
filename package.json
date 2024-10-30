@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "bun run --watch src/index.ts",
-    "build": "bun build ./src/index.ts --target bun --outfile dist/index.js",
-    "start": "NODE_ENV=production bun run src/index.ts"
+    "build": "bun build ./src/index.ts --target node --outdir dist"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.8.0",
