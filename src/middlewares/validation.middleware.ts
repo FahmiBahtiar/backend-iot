@@ -35,7 +35,7 @@ export const validateRequest = new Elysia()
     'information.update': t.Object({
       distance: t.Optional(t.Number({
         minimum: 0,
-        maximum: 100
+        maximum: 500
       })),
       level: t.Optional(t.Number({
         minimum: 0,
@@ -51,8 +51,8 @@ export const validateRequest = new Elysia()
     'information.create': t.Object({
       distance: t.Number({
         minimum: 0,
-        maximum: 100,
-        error: 'Distance must be between 0 and 100'
+        maximum: 500,
+        error: 'Distance must be between 0 and 500'
       }),
       level: t.Number({
         minimum: 0,

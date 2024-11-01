@@ -53,6 +53,3 @@ logger.logInfo("Server started", {
 console.log(
   `🦊 Elysia server is running at ${app.server?.hostname}:${app.server?.port}`
 );
-
-
-export default app;
