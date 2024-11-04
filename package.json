@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "bun run --watch src/index.ts",
     "start": "bun run src/index.ts",
-    "build": "bun build src/index.ts --outfile=dist/index.js"
+    "build": "bun build ./src/index.ts --outdir ./dist --target node"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.8.0",
     "@elysiajs/swagger": "^0.8.0",
     "@elysiajs/websocket": "^0.2.8",
+    "@netlify/functions": "^2.8.2",
     "elysia": "^0.8.17",
     "mongoose": "^8.1.1"
   },
