@@ -21,7 +21,7 @@ jobs:
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: v2.x
+          deno-version: v1.x
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -39,6 +39,6 @@ jobs:
         with:
           project: "backendiot"
           entrypoint: "src/index.ts"
-          root: "./"
-          include: *.ts *.js *.json
-          exclude: node_modules/ .env .git/ test/ *.test.ts
+          root: ""
+          
+          
