@@ -1,7 +1,0 @@
-[build]
-  command = "bun run build"
-  functions = "netlify/functions"  # Folder untuk functions
-  publish = "netlify/functions"    # Sesuaikan dengan publish directory di dashboard
-
-[functions]
-  node_bundler = "esbuild"
