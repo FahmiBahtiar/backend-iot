@@ -1,9 +1,0 @@
-{
-    "compilerOptions": {
-      "lib": ["deno.window"],
-      "types": ["bun-types"]
-    },
-    "imports": {
-      "elysia": "npm:elysia"
-    }
-  }
