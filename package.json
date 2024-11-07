@@ -4,7 +4,9 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outfile=dist/index.js"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.8.0",
