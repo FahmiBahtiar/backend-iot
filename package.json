@@ -4,10 +4,7 @@
   "module": "src/index.ts",
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
-    "build": "bun build src/index.ts --target browser --outfile dist/index.js",
-    "deploy": "bunx wrangler deploy",
-    "start:dev": "bunx wrangler dev src/index.ts"
+    "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
     "@elysiajs/cors": "^0.8.0",
