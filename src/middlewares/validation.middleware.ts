@@ -33,6 +33,14 @@ export const validateRequest = new Elysia()
     }),
 
     'information.update': t.Object({
+      state: t.Object({
+        manualMode: t.Optional(t.Boolean({
+          default: false,
+        })),
+        relay: t.Optional(t.Boolean({
+          default: false,
+        })),
+      }),
       distance: t.Optional(t.Number({
         minimum: 0,
         maximum: 500
@@ -49,6 +57,14 @@ export const validateRequest = new Elysia()
     }),
 
     'information.create': t.Object({
+      state: t.Object({
+        manualMode: t.Optional(t.Boolean({
+          default: false,
+        })),
+        relay: t.Optional(t.Boolean({
+          default: false,
+        })),
+      }),
       distance: t.Number({
         minimum: 0,
         maximum: 500,

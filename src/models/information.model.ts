@@ -2,6 +2,18 @@ import mongoose from "mongoose";
 
 
 const informationSchema = new mongoose.Schema({
+    state:{
+        manualMode: {
+            default:false,
+            type: Boolean,
+            required: false
+        },
+        relay:{
+            type: Boolean,
+            default:false,
+            required:false
+        }
+    },
     distance: {
         type: Number,
         required: true

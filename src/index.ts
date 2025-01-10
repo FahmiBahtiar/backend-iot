@@ -6,6 +6,8 @@ import { requestLogger } from "./middlewares/logger.middleware";
 import { DiscordLogger } from "./middlewares/discord.middleware";
 import { informationRoutes } from "./routes/information.route";
 import { loggerRoutes } from "./routes/logger.route";
+import { cors } from '@elysiajs/cors'
+
 
 // Validate environment variables
 if (!process.env.DISCORD_WEBHOOK_URL) {
@@ -14,12 +16,13 @@ if (!process.env.DISCORD_WEBHOOK_URL) {
 }
 
 export const logger = new DiscordLogger(process.env.DISCORD_WEBHOOK_URL || "");
-
+3
 // Connect to MongoDB
 connectDB();
 
 // Initialize Elysia app
 const app = new Elysia()
+  .use(cors())
   .use(
     swagger({
       documentation: {
@@ -43,10 +46,10 @@ const app = new Elysia()
       };
     })
   )
-  .listen(3000);
+  .listen(4000);
 // Log startup
 logger.logInfo("Server started", {
-  port: 3000,
+  port: 4000,
   environment: process.env.NODE_ENV,
 });
 

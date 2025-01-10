@@ -9,7 +9,7 @@
     "build": "bun build src/index.ts --outfile=dist/index.js"
   },
   "dependencies": {
-    "@elysiajs/cors": "^0.8.0",
+    "@elysiajs/cors": "^1.2.0",
     "@elysiajs/swagger": "^0.8.0",
     "@elysiajs/websocket": "^0.2.8",
     "@netlify/functions": "^2.8.2",
