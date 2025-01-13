@@ -41,6 +41,14 @@ export const validateRequest = new Elysia()
           default: false,
         })),
       }),
+      config: t.Object({
+        threshold: t.Optional(t.Number({
+          default: 10,
+        })),
+        height: t.Optional(t.Number({
+          default: 100
+        })),
+      }),
       distance: t.Optional(t.Number({
         minimum: 0,
         maximum: 500
@@ -63,6 +71,14 @@ export const validateRequest = new Elysia()
         })),
         relay: t.Optional(t.Boolean({
           default: false,
+        })),
+      }),
+      config: t.Object({
+        threshold: t.Optional(t.Number({
+          default: 10,
+        })),
+        height: t.Optional(t.Number({
+          default: 100
         })),
       }),
       distance: t.Number({

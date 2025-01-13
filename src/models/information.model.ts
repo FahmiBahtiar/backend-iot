@@ -14,6 +14,18 @@ const informationSchema = new mongoose.Schema({
             required:false
         }
     },
+    config: {
+        threshold: {
+            default: 10,
+            type: Number,
+            required: false
+        },
+        height: {
+            default: 100,
+            type: Number,
+            required: false
+        }
+    },
     distance: {
         type: Number,
         required: true
