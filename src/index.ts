@@ -15,8 +15,8 @@ if (!process.env.DISCORD_WEBHOOK_URL) {
   process.exit(1);
 }
 
-export const logger = new DiscordLogger(process.env.DISCORD_WEBHOOK_URL || "");
-3
+// export const logger = new DiscordLogger(process.env.DISCORD_WEBHOOK_URL || "");
+// 3
 // Connect to MongoDB
 connectDB();
 
@@ -48,10 +48,10 @@ const app = new Elysia()
   )
   .listen(4000);
 // Log startup
-logger.logInfo("Server started", {
-  port: 4000,
-  environment: process.env.NODE_ENV,
-});
+// logger.logInfo("Server started", {
+//   port: 4000,
+//   environment: process.env.NODE_ENV,
+// });
 
 console.log(
   `🦊 Elysia server is running at ${app.server?.hostname}:${app.server?.port}`
